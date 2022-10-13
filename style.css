@@ -110,6 +110,11 @@ form input{
 .bottom-container-info, .bottom-bg-wrapper{
     background-color: #F8F8FE;
 }
+.bottom-container-info{
+    padding-bottom: 5.9em;
+    display: grid;
+    row-gap: 1rem;
+}
 .bottom-bg-wrapper{
     margin-top: -5px;
 }
@@ -142,10 +147,14 @@ h2{
 
 article{
     max-width: 17.5rem;
-    height: 10.569rem;
+    max-height: 10.569rem;
     background: white;
     box-shadow: 0px 0px 8px 4px rgba(56, 56, 56, 0.0458843);
     border-radius: 3.93258px;
+    margin: 0 auto;
+    padding: 1em;
+    display: grid;
+    gap: 0.3em;
 }
 article img{
     width: 24px;
@@ -154,13 +163,48 @@ article img{
 }
 article p{
     font-size: 0.625rem;
+    text-align: left;
 }
 .avatar-job{
     font-size: 0.375rem;
     line-height: 11.8px;
     letter-spacing: 0.3px;
 }
+.avatar-testimonial{
+    display: flex;
+    align-items: center;
+    
+}
+.avatar p{
+    text-align: left;
+}
+.avatar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+}
+
+
+
+
+.get-access{
+    height: 375px;
+    background-color: var(--Desaturated-Blue);
+    padding: 2.5em;
+    display: grid;
+    row-gap: 0.5em;
+    color: white;
+}
+
 
 footer{
-    background-color: aquamarine;
+    height: 590px;
+    background: var(--Very-Dark-Blue);
+  
+}
+footer a{
+    color: white;
+}
+footer img{
+    filter: brightness(0) invert(1);
 }
