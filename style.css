@@ -17,6 +17,8 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    /* max-width: 35rem;
+    margin: 0 auto; */
 }
 nav, .top-container{
     padding: 2em 2em 0 2em;
@@ -53,6 +55,7 @@ nav img{
 /* background images width to make responsive */
 .bg img{
     max-width: 100%;
+    
 }
 
 /* first top container */
@@ -77,13 +80,13 @@ form input{
     border-radius: 3.125px;
     border: 0.625px solid var(--Very-Dark-Blue);
 }
-.btn-input #mail{
+#mail{
     margin-bottom: 1.2em;
     padding: 1em 0;
     padding-left: 1.313em;
     color:var(--Light-Gray);
 }
-.btn-input #submit{
+#submit{
     border: none;
     padding: 0.9em;
     background-color: var(--Bright-Blue);
@@ -124,13 +127,12 @@ form input{
 
 
 
-
+/* info container */
 h2{
     font-size: 1rem;
 }
 .green-text{
     display: flex;
-    /* width: 100%; */
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -145,6 +147,9 @@ h2{
     border-bottom: 1px solid var(--Moderate-Cyan);
 }
 
+/* testimonial container */
+
+/* set general styles for testimonial box */
 article{
     max-width: 17.5rem;
     max-height: 10.569rem;
@@ -156,6 +161,7 @@ article{
     display: grid;
     gap: 0.3em;
 }
+/* black quotes img */
 article img{
     width: 24px;
     height: 24px;
@@ -165,28 +171,26 @@ article p{
     font-size: 0.625rem;
     text-align: left;
 }
-.avatar-job{
-    font-size: 0.375rem;
-    line-height: 11.8px;
-    letter-spacing: 0.3px;
-}
+/* avatar */
 .avatar-testimonial{
     display: flex;
-    align-items: center;
-    
-}
-.avatar p{
-    text-align: left;
+    align-items: center; 
 }
 .avatar{
     display: flex;
     flex-direction: column;
     margin-left: 7px;
 }
+.avatar p{
+    text-align: left;
+}
+.avatar-job{
+    font-size: 0.375rem;
+    line-height: 11.8px;
+    letter-spacing: 0.3px;
+}
 
-
-
-
+/* get access section */
 .get-access{
     height: 375px;
     background-color: var(--Desaturated-Blue);
@@ -196,15 +200,89 @@ article p{
     color: white;
 }
 
-
+/* footer */
 footer{
     height: 590px;
     background: var(--Very-Dark-Blue);
-  
+    padding: 3em;
+    display: grid;
+    row-gap: 2em;
 }
 footer a{
     color: white;
+    font-size: 1rem;
 }
-footer img{
+/* make footer image white and set width */
+footer .logo{
     filter: brightness(0) invert(1);
+    max-width: 40%;
+}
+/* row-gap in different parent sections */
+footer .about-us, .contact-us, .contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+/* make social media icons centered */
+footer .social-media{
+    display: flex;
+    justify-content: center;
+    column-gap:10px;
+}
+
+/* hovers */
+#submit:hover{
+    background:#6C9BFF;
+}
+footer a:hover{
+    color: var(--Bright-Blue);
+}
+footer .social-media a:hover path{
+    fill:var(--Bright-Blue);
+}
+
+
+
+@media (min-width:62.5rem) {
+    nav, .top-container{
+        padding: 5em 5em 0 5em;
+    }
+    .top-container{
+        padding-top: 0 !important;
+    }
+    .top-container{
+        display: flex;
+        column-gap: 10%;
+        
+    }
+    .top-container img{
+        max-width: 23em;
+    }
+    .top-container-info{
+        display: grid;
+        row-gap: 0.5rem !important;
+        max-width: 50%;
+    }
+
+    .top-container h1, p{
+        text-align: left;
+    }
+    .top-container .imtop-container-infog{
+        order: 1;
+    }
+    .top-container .top-bg-wrapper{
+        order: 2;
+    }
+    .top-container #mail{
+        width: 20rem;
+        height: 45px;
+    }
+    .top-container #submit{
+        width: 12.5rem;
+        height: 45px;
+    }
+    .btn-input form{
+        display: flex;
+        gap: 1em;
+    }
 }
