@@ -29,8 +29,12 @@
             <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
             <div class="btn-input">
                 <form>
-                    <input type="text" id="mail" value="Enter your email…"> 
-                    <input type="submit" id="submit" value="Get Started">
+                    <div class="input-control">
+                        <input type="text" id="mail" class="mail" placeholder="Enter your email…" onkeyup="validateEmail()"> 
+                        <span id="mail-error"></span>
+
+                    </div>
+                    <button type="submit" id="submit" class="submit">Get Started</button>
                 </form>
             </div>
         </div>
@@ -72,10 +76,14 @@
        
         <div class="btn-input">
             <form>
-                <input type="text" id="mail" value="email@example.com"> 
-                <input type="submit" id="submit" value="Get Started For Free">
+                <div class="input-control">
+                    <input type="text" id="mail-2" placeholder="email@example.com" onkeyup="validateEmail2()"> 
+                    <span id="mail-error-2"></span>
+                </div>
+                <div class="error"></div>
+                <button type="submit" id="submit-2">Get Started For Free</button>
             </form>
-        </div>
+        </div>        
     </div>
 </main>
 
@@ -130,4 +138,5 @@
     </div>
 </footer>
 </body>
+<script src="index.js"></script>
 </html>

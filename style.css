@@ -71,19 +71,23 @@ h1{
 }
 
 /* form tag */
-form input{
+form input,button{
     display:inline;
     width: 100%;
     border-radius: 3.125px;
     border: 0.625px solid var(--Very-Dark-Blue);
 }
-#mail{
-    margin-bottom: 1.2em;
+form{
+    display: grid;
+    gap: 1em;
+}
+form input{
+    /* margin-bottom: 1.2em; */
     padding: 1em 0;
     padding-left: 1.313em;
     color:var(--Light-Gray);
 }
-#submit{
+form button{
     border: none;
     padding: 0.9em;
     background-color: var(--Bright-Blue);
@@ -91,7 +95,10 @@ form input{
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
     cursor: pointer;
 }
-
+form span{
+    color: #EF4877;
+    font-size: 1rem; 
+}
 /* second bottom container */
 .bottom-container{
     margin-top: 5.625rem;
@@ -268,11 +275,11 @@ footer .social-media a:hover path{
         display: flex;
         gap: 1em;
     }
-    .top-container #mail{
+    .top-container input{
         width: 20rem;
         height: 45px;
     }
-    .top-container #submit{
+    .top-container button{
         width: 12.5rem;
         height: 45px;
     }
@@ -331,11 +338,11 @@ footer .social-media a:hover path{
         text-align: left;
     }
     /* input styles */
-    .get-access #mail{
+    .get-access input{
         width: 30rem;
         height: 45px;
     }
-    .get-access #submit{
+    .get-access button{
         width: 12.5rem;
         height: 45px;
     }
