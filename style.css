@@ -285,4 +285,20 @@ footer .social-media a:hover path{
         display: flex;
         gap: 1em;
     }
+
+    .bottom-container{
+        /* display: flex; */
+        column-gap: 10%;
+        padding: 0 !important;
+    }
+    .bottom-container-info{
+        order: 1;
+        justify-content: left;
+    }
+    .bottom-container-info img{
+        width: 20%;
+    }
+    .bottom-bg-wrapper{
+        order: 2;
+    }
 }
