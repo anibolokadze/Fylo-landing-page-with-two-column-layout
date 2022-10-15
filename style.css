@@ -17,8 +17,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    /* max-width: 35rem;
-    margin: 0 auto; */
 }
 nav, .top-container{
     padding: 2em 2em 0 2em;
@@ -55,7 +53,6 @@ nav img{
 /* background images width to make responsive */
 .bg img{
     max-width: 100%;
-    
 }
 
 /* first top container */
@@ -95,8 +92,6 @@ form input{
     cursor: pointer;
 }
 
-
-
 /* second bottom container */
 .bottom-container{
     margin-top: 5.625rem;
@@ -113,20 +108,17 @@ form input{
 .bottom-container-info, .bottom-bg-wrapper{
     background-color: #F8F8FE;
 }
+.bottom-bg-wrapper{
+    margin-top: -5px;
+}
 .bottom-container-info{
     padding-bottom: 5.9em;
     display: grid;
     row-gap: 1rem;
 }
-.bottom-bg-wrapper{
-    margin-top: -5px;
-}
 .bottom-bg-wrapper img{
     padding: 5.813em 0 5.438em 0;
 }
-
-
-
 /* info container */
 h2{
     font-size: 1rem;
@@ -146,9 +138,6 @@ h2{
     font-size: 0.75rem;
     border-bottom: 1px solid var(--Moderate-Cyan);
 }
-
-/* testimonial container */
-
 /* set general styles for testimonial box */
 article{
     max-width: 17.5rem;
@@ -161,38 +150,35 @@ article{
     display: grid;
     gap: 0.3em;
 }
-/* black quotes img */
-article img{
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-}
 article p{
     font-size: 0.625rem;
     text-align: left;
 }
-/* avatar */
+/* avatar-testimonial*/
 .avatar-testimonial{
     display: flex;
     align-items: center; 
 }
+/* avatar description */
 .avatar{
     display: flex;
     flex-direction: column;
     margin-left: 7px;
-}
-.avatar p{
-    text-align: left;
 }
 .avatar-job{
     font-size: 0.375rem;
     line-height: 11.8px;
     letter-spacing: 0.3px;
 }
-
+/* avatar image */
+article img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
 /* get access section */
 .get-access{
-    height: 375px;
+    height: 23.438rem;
     background-color: var(--Desaturated-Blue);
     padding: 2.5em;
     display: grid;
@@ -202,7 +188,7 @@ article p{
 
 /* footer */
 footer{
-    height: 590px;
+    height: 36.875rem;
     background: var(--Very-Dark-Blue);
     padding: 3em;
     display: grid;
@@ -211,6 +197,10 @@ footer{
 footer a{
     color: white;
     font-size: 1rem;
+}
+.footer-content{
+    display: grid;
+    gap: 2em;
 }
 /* make footer image white and set width */
 footer .logo{
@@ -229,7 +219,6 @@ footer .social-media{
     justify-content: center;
     column-gap:10px;
 }
-
 /* hovers */
 #submit:hover{
     background:#6C9BFF;
@@ -241,37 +230,43 @@ footer .social-media a:hover path{
     fill:var(--Bright-Blue);
 }
 
-
-
 @media (min-width:62.5rem) {
+    /* set general padding */
     nav, .top-container{
         padding: 5em 5em 0 5em;
     }
+    /* sort containers in a row */
     .top-container{
         padding-top: 0 !important;
-    }
-    .top-container{
         display: flex;
-        column-gap: 10%;
-        
+        column-gap: 10%; 
     }
+    .top-container-info{
+        order: 1;
+    }
+    .top-bg-wrapper{
+        order: 2;
+    }
+    /* set max-width to top container bg */
     .top-container img{
         max-width: 23em;
     }
+    /* set max-width to top container text info */
     .top-container-info{
         display: grid;
         row-gap: 0.5rem !important;
         max-width: 50%;
     }
-
     .top-container h1, p{
         text-align: left;
     }
-    .top-container .imtop-container-infog{
-        order: 1;
+    h1{
+        font-size: 2.5rem;
     }
-    .top-container .top-bg-wrapper{
-        order: 2;
+    /* input styles */
+    .top-container form{
+        display: flex;
+        gap: 1em;
     }
     .top-container #mail{
         width: 20rem;
@@ -281,24 +276,76 @@ footer .social-media a:hover path{
         width: 12.5rem;
         height: 45px;
     }
-    .btn-input form{
-        display: flex;
-        gap: 1em;
-    }
-
+    /* sort containers in a row - bottom section */
     .bottom-container{
-        /* display: flex; */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 5em 5em 0 5em;
+        background-color: #F8F8FE;
         column-gap: 10%;
-        padding: 0 !important;
     }
     .bottom-container-info{
         order: 1;
-        justify-content: left;
-    }
-    .bottom-container-info img{
-        width: 20%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.7rem;
+        max-width: 55%;
+        padding-bottom: 6.688em;
+        align-items: flex-start;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     .bottom-bg-wrapper{
+        max-width: 27rem;
         order: 2;
+    }
+    .curve-bg{
+        display: none;
+    }
+    /* avatar testimonial section */
+    article{
+        margin-top: 2.813em;
+        margin-left: 0 !important;
+    }
+    .bottom-container h2{
+        font-size: 2.5rem;
+        text-align: left;
+    }
+    /* get access section */
+    .get-access{
+        padding: 5em 5em 0 5em;
+        display: flex;
+        column-gap: 10%;
+        height: 21rem;
+    }
+    .get-access-info{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 33.313rem;
+        row-gap: 1em;
+    }
+    .get-access h2{
+        font-size: 2rem;
+        text-align: left;
+    }
+    /* input styles */
+    .get-access #mail{
+        width: 30rem;
+        height: 45px;
+    }
+    .get-access #submit{
+        width: 12.5rem;
+        height: 45px;
+    }
+    /* footer */
+    footer{
+        height: 24.375rem;
+        padding: 5em;
+    }
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
     }
 }
