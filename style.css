@@ -244,7 +244,7 @@ footer .social-media a:hover path{
 @media (min-width:62.5rem) {
     /* set general padding */
     nav, .top-container{
-        padding: 5em 5em 0 5em;
+        padding: 2em 5em;
     }
     /* sort containers in a row */
     .top-container{
